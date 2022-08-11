@@ -44,8 +44,8 @@ rspec
 
 👤 **Abdul Hadi**
 
-- GitHub: [@jsug9](https://github.com/Hadi111jafari)
-- LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/abdul-hadi-jafari)
+- GitHub: [@Hadi111jafari](https://github.com/Hadi111jafari)
+- LinkedIn: [@Hadi111jafari](https://www.linkedin.com/in/abdul-hadi-jafari)
 
 ## 🤝 Contributing
 

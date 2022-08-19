@@ -18,8 +18,11 @@
       <div class="post_comments">Comments: <%= post.comments_counter %></div>
       <div class="post_likes">Likes: <%= post.likes_counter %></div>
     </div>
+     <button class="user_btn">
+      <%= link_to "More", user_post_path(user, post) %>
+    </button>
   </div>
-
+  
   <div class="comments">
     <% post.last_5_comments.each do |comment|%>
       <% name = @users.where(id: comment.author_id ) %>

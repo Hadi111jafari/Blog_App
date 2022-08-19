@@ -8,6 +8,9 @@
         <div class="user_name"><%= user.name %></div>
         <div class="user_posts">Number of posts: <%= user.posts_counter %></div>
       </div>
+      <button id="user_btn">
+        <%= link_to "Access User Info", user_path(user) %>
+      </button>
     </li>
   <% end %>
 </ul>

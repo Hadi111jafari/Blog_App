@@ -6,10 +6,10 @@
       </div>
       <div class="user_card">
         <div class="user_name"><%= user.name %></div>
-        <div class="user_posts">Number of posts: <%= user.posts_counter %></div>
+        <div class="user_posts">Number of Posts: <%= user.posts_counter %></div>
       </div>
       <button id="user_btn">
-        <%= link_to "Access User Info", user_path(user) %>
+        <%= link_to "Access User", user_path(user) %>
       </button>
     </li>
   <% end %>

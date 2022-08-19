@@ -1,81 +1,81 @@
 .card {
-    display: flex;
-    width: 60%;
-    margin: 30px auto;
-  }
-  
-  .photo {
-    width: 200px;
-  }
-  
-  .user_card {
-    border: 1px solid #000;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .user_name {
-    font-size: 50px;
-    align-self: center;
-    margin-left: 80px;
-  }
-  
-  .user_posts {
-    font-size: 20px;
-    align-self: end;
-    margin: 30px;
-    cursor: pointer;
-  }
-  
-  .bio {
-    border: 1px solid #000;
-    width: 60%;
-    margin: 0 auto;
-  }
-  
-  .bio_title,
-  .post_count,
-  .post_title {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px;
-  }
-  
-  .bio_data,
-  .post_text {
-    font-size: 20px;
-    margin: 10px;
-  }
-  
-  .post {
-    width: 60%;
-    margin: 20px auto;
-    list-style: none;
-    border: 1px solid #000;
-  }
-  
-  .post_count {
-    font-size: 15px;
-  }
-  
-  .post_media {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 30px;
-  }
-  
-  .post_comments {
-    margin-right: 20px;
-  }
-  
-  .post_button {
-    display: flex;
-    justify-content: center;
-  }
-  
-  button {
-    padding: 10px;
-    width: 150px;
-    background-color: #fff;
-  }
+  display: flex;
+  width: 60%;
+  margin: 30px auto;
+}
+
+.photo {
+  width: 200px;
+}
+
+.user_card {
+  border: 1px solid #000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_name {
+  font-size: 50px;
+  align-self: center;
+  margin-left: 80px;
+}
+
+.user_posts {
+  font-size: 20px;
+  align-self: end;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.bio {
+  border: 1px solid #000;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bio_title,
+.post_count,
+.post_title {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.bio_data,
+.post_text {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.post {
+  width: 60%;
+  margin: 20px auto;
+  list-style: none;
+  border: 1px solid #000;
+}
+
+.post_count {
+  font-size: 15px;
+}
+
+.post_media {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.post_comments {
+  margin-right: 20px;
+}
+
+.post_button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  width: 150px;
+  background-color: #fff;
+}

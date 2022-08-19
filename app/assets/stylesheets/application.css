@@ -13,22 +13,22 @@
  *= require_tree .
  *= require_self
  */
- * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  .login {
-    width: 40%;
-    margin: 100px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  input {
-    margin: 15px;
-    padding: 10px;
-    width: 50%;
-  }
+.login {
+  width: 40%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin: 15px;
+  padding: 10px;
+  width: 50%;
+}

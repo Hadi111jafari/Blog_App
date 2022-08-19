@@ -1,42 +1,41 @@
 .comments {
-    width: 60%;
-    margin: 0 auto;
-    border: 1px solid #000;
-  }
-  
-  .comment {
-    display: flex;
-    margin: 15px;
-  }
-  
-  .comment_name {
-    width: 5%;
-  }
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
 
-  .post_data {
-    width: 60%;
-    margin: 30px auto;
-    border: 1px solid #000;
-    padding-top: 10px;
-  }
-  
-  .post_data_top {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .post_data_by {
-    font-size: 20px;
-    margin: 0 10px;
-  }
-  
-  .post_data_title {
-    font-size: 30px;
-    margin: 20px;
-  }
-  
-  .post_data_text {
-    font-size: 20px;
-    margin: 20px;
-  }
-  
+.comment {
+  display: flex;
+  margin: 15px;
+}
+
+.comment_name {
+  width: 5%;
+}
+
+.post_data {
+  width: 60%;
+  margin: 30px auto;
+  border: 1px solid #000;
+  padding-top: 10px;
+}
+
+.post_data_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post_data_by {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.post_data_title {
+  font-size: 30px;
+  margin: 20px;
+}
+
+.post_data_text {
+  font-size: 20px;
+  margin: 20px;
+}

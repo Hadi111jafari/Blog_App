@@ -1,1 +1,34 @@
-<h1>this is users_id</h1>
+<section class="card">
+  <div class="photo">
+    <%= image_tag(@user.photo, width: "150px") %>
+  </div>
+  <div class="user_card">
+    <div class="user_name"><%= @user.name %></div>
+    <div class="user_posts">Number of posts: <%= @user.posts_counter %></div>
+  </div>
+</section>
+
+<div class="bio">
+  <div class="bio_title">Bio</div>
+  <p class="bio_data"><%= @user.bio  %></p>
+</div>
+
+<% @count=0 %>
+<section class="posts">
+  <% @user.last_3_posts.each do |post| %>
+    <div class="post">
+      <div class="post_count">Post #<%=@count+=1%></div>
+      <div class="post_title"><%= post.title %></div>
+      <div class="post_text"><%= post.text %></div>
+      <div class="post_media">
+        <div class="post_comments">Comments: <%= post.comments_counter %></div>
+        <section class="post_likes">Likes: <%= post.likes_counter %></div>
+      </div>
+      <br />    
+    </div>
+  <% end %>
+</section>
+
+<div class="post_button">
+  <button class="post_button">See all posts</button>
+</div> 

@@ -1,1 +1,23 @@
-<h1>this is posts_id</h1>
+<% name = @users.where(id: @post.author_id ) %>
+<section class="post_data">
+  <div class="post_data_top">
+    <div class="post_data_by">Post by: <%= name.first.name %></div>
+    <div class="post_media">
+      <div class="post_comments">Comments: <%= @post.comments_counter  %></div>
+      <div class="post_likes">Likes: <%= @post.likes_counter  %></div>
+    </div>
+  </div>
+  <div class="post_data_title"><%= @post.title  %></div>
+  <div class="post_data_text"><%= @post.text  %></div>
+</section>
+
+<section class="comments">
+  <% data = @comments.where(post_id: @post.id ) %>
+  <% data.each do |comment| %>
+    <% name = @users.where(id: comment.author_id ) %>
+    <div class="comment">
+      <div class="comment_name"><%= name.first.name %>: </div>
+      <section class="comment_text"><%= comment.text %></div>
+    </div>
+  <% end %>
+</section>

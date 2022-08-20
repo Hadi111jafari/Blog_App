@@ -2,6 +2,7 @@
   display: flex;
   width: 60%;
   margin: 30px auto;
+  position: relative;
 }
 
 .photo {
@@ -49,6 +50,9 @@
 }
 
 .post {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   width: 60%;
   margin: 20px auto;
   list-style: none;
@@ -57,6 +61,7 @@
 
 .post_count {
   font-size: 15px;
+  margin: 8px;
 }
 
 .post_media {
@@ -88,5 +93,42 @@ button {
 }
 
 .user_btn {
-  border: none;
+  /* border: none; */
+  border-radius: 50px;
+  border: 1px solid #000;
+  position: absolute;
+  right: 0;
+}
+
+.form {
+  width: 60%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-title,
+.form-text {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 30px;
+}
+
+.title-form {
+  width: 100%;
+  margin: 0;
+}
+
+.text-form {
+  resize: none;
+  height: 250px;
+}
+
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

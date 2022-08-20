@@ -21,6 +21,7 @@
      <button class="user_btn">
       <%= link_to "More", user_post_path(user, post) %>
     </button>
+    <%= button_to "Like", user_post_likes_path(user, post), params: { like: { author_id: user.id, post_id: post.id}}%>
   </div>
   
   <div class="comments">

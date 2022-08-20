@@ -23,6 +23,9 @@
       <div class="post_media">
         <div class="post_comments">Comments: <%= post.comments_counter %></div>
         <section class="post_likes">Likes: <%= post.likes_counter %></div>
+        <div>
+          <%= button_to "Like", user_post_likes_path(@user, post), params: { like: { author_id: @user.id, post_id: post.id}} %>
+        </div>
       </div>
       <br />    
     </div>
@@ -31,4 +34,5 @@
 
 <div class="post_button">
   <button class="post_button"><%= link_to "See all posts", user_posts_path(@user) %></button>
+  <button><%= link_to "Add a post", new_user_post_path(@user) %></button>
 </div> 

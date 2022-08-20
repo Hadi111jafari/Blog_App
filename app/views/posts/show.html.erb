@@ -20,4 +20,7 @@
       <section class="comment_text"><%= comment.text %></div>
     </div>
   <% end %>
+  <button class=btn_comment>
+    <%= link_to "Add comment", new_user_post_comment_path(name.first.id, @post.id) %>
+  </button>
 </section>

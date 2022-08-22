@@ -1,16 +1,14 @@
-<% identifier = @posts.first %>
-<% user = User.find(id = identifier.author_id) %>
 <div class="card">
   <div class="photo">
-    <%= image_tag(user.photo, width: "150px") %>
+    <%= image_tag(@user.photo, width: "150px") %>
   </div>
   <div class="user_card">
-    <div class="user_name"><%= user.name %></div>
-    <div class="user_posts">Number of posts: <%= user.posts_counter %></div>
+    <div class="user_name"><%= @user.name %></div>
+    <div class="user_posts">Number of posts: <%= @user.posts_counter %></div>
   </div>
 </div>
 
-<% @posts.each do |post| %>
+<% @user.posts.each do |post| %>
   <div class="post">
     <div class="post_title"><%= post.title %></div>
     <div class="post_text"><%= post.text %></div>
@@ -19,16 +17,15 @@
       <div class="post_likes">Likes: <%= post.likes_counter %></div>
     </div>
      <button class="user_btn">
-      <%= link_to "More", user_post_path(user, post) %>
+      <%= link_to "More", user_post_path(@user, post) %>
     </button>
-    <%= button_to "Like", user_post_likes_path(user, post), params: { like: { author_id: user.id, post_id: post.id}}%>
+    <%= button_to "Like", user_post_likes_path(@user, post), params: { like: { author_id: @user.id, post_id: post.id}}%>
   </div>
   
   <div class="comments">
     <% post.last_5_comments.each do |comment|%>
-      <% name = @users.where(id: comment.author_id ) %>
       <div class="comment">
-        <div class="comment_name"><%= name.first.name %>: </div>
+        <div class="comment_name"><%= comment.author.name %>: </div>
         <div class="comment_text"><%= comment.text %></div>
       </div>
   <% end %>

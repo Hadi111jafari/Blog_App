@@ -25,4 +25,11 @@ RSpec.describe 'User listig path', type: :feature do
     expect(page).to have_content('Number of Posts: 0')
     expect(page).to have_content('Number of Posts: 1')
   end
+
+  it 'should redirected to that user\'s show page, when the username is clicked.' do
+    visit users_path
+    click_on 'Hadi'
+
+    expect(page).to have_current_path(user_path(@user))
+  end
 end

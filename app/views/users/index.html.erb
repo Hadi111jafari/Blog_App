@@ -2,7 +2,7 @@
   <% @users.each do |user| %>
     <li class="card">
       <div class="photo">
-        <%= image_tag(user.photo, width: "150px") %>
+        <%= image_tag(user.photo, id: "#{user.name}-img-#{user.id}", width: "150px") %>
       </div>
       <div class="user_card">
         <div class="user_name"><%= user.name %></div>

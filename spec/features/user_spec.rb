@@ -8,7 +8,7 @@ RSpec.describe 'User listig path', type: :feature do
     Post.create(author: @user, title: 'Post 2', text: 'Lorem ipsum dolor sit amet', comments_counter: 0, likes_counter: 0)
     Post.create(author: @user, title: 'Post 3', text: 'Lorem ipsum dolor sit amet', comments_counter: 0, likes_counter: 0)
     Post.create(author: @user, title: 'Post 4', text: 'Lorem ipsum dolor sit amet', comments_counter: 0, likes_counter: 0)
-    Post.create(author: @user, title: 'Post 5', text: 'Lorem ipsum dolor sit amet', comments_counter: 0, likes_counter: 0)
+    @post5 = Post.create(author: @user, title: 'Post 5', text: 'Lorem ipsum dolor sit amet', comments_counter: 0, likes_counter: 0)
   end
 
   it 'should show the user\'s profile picture.' do
@@ -39,8 +39,9 @@ RSpec.describe 'User listig path', type: :feature do
     expect(page).to_not have_content('Post 2')
   end
 
-  it 'should show the user\'s bio.' do
+  it 'should rediects to the user\'s posts show page after clicking a post title.' do
     visit user_path(@user)
-    expect(page).to have_content('See all posts')
+    click_on 'Post 5'
+    expect(page).to have_current_path(user_post_path(@user, @post5))
   end
 end

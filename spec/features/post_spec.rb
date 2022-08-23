@@ -44,4 +44,11 @@ RSpec.describe 'Post listig path', type: :feature do
     expect(page).to have_content('Hadi:')
     expect(page).to have_content('Jafari:')
   end
+
+  
+  it 'checks that I can see the username of each commentor.' do
+    visit user_post_path(@user, @post)
+    expect(page).to have_content("Hadi:\nComment 1 for Post 1")
+    expect(page).to have_content("Jafari:\nComment 2 for Post 1")
+  end
 end

@@ -6,13 +6,18 @@ RSpec.describe 'User listig path', type: :feature do
                         posts_counter: 0)
   end
 
-  it 'shoult show the user\'s profile picture.' do
+  it 'should show the user\'s profile picture.' do
     visit user_path(@user)
     expect(page.find('img')['src']).to have_content('https://unsplash.com/photos/F_-0BxGuVvo')
   end
 
-  it 'shoult show the user\'s username.' do
+  it 'should show the user\'s username.' do
     visit user_path(@user)
     expect(page).to have_content('Hadi')
+  end
+
+  it 'should show the user\'s number of posts.' do
+    visit user_path(@user)
+    expect(page).to have_content('Number of posts: 0')
   end
 end

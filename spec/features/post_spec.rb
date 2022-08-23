@@ -23,4 +23,14 @@ RSpec.describe 'Post listig path', type: :feature do
     visit user_post_path(@user, @post)
     expect(page).to have_content('Post by: Hadi')
   end
+
+  it 'check that I can see how many comments it has.' do
+    visit user_post_path(@user, @post)
+    expect(page).to have_content('Comments: 2')
+  end
+
+  it 'check that I can see how many likes it has.' do
+    visit user_post_path(@user, @post)
+    expect(page).to have_content('Likes: 0')
+  end
 end

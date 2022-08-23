@@ -33,4 +33,15 @@ RSpec.describe 'Post listig path', type: :feature do
     visit user_post_path(@user, @post)
     expect(page).to have_content('Likes: 0')
   end
+
+  it 'should show some the post\'s body' do
+    visit user_post_path(@user, @post)
+    expect(page).to have_content('Lorem ipsum dolor sit amet')
+  end
+
+  it 'checks that I can see the username of each commentor.' do
+    visit user_post_path(@user, @post)
+    expect(page).to have_content('Hadi:')
+    expect(page).to have_content('Jafari:')
+  end
 end

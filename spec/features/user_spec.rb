@@ -38,4 +38,9 @@ RSpec.describe 'User listig path', type: :feature do
     expect(page).to have_content('Post 3')
     expect(page).to_not have_content('Post 2')
   end
+
+  it 'should show the user\'s bio.' do
+    visit user_path(@user)
+    expect(page).to have_content('See all posts')
+  end
 end

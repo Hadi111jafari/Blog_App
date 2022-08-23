@@ -39,9 +39,20 @@ RSpec.describe 'User listig path', type: :feature do
     expect(page).to_not have_content('Post 2')
   end
 
+  it 'should show a button that lets me view all of a user\'s posts.' do
+    visit user_path(@user)
+    expect(page).to have_content('See all posts')
+  end
+
   it 'should rediects to the user\'s posts show page after clicking a post title.' do
     visit user_path(@user)
     click_on 'Post 5'
     expect(page).to have_current_path(user_post_path(@user, @post5))
+  end
+
+  it 'should redirects the user to the user\'s post\'s index page when clicking to see all posts' do
+    visit user_path(@user)
+    click_on 'See all posts'
+    expect(page).to have_current_path(user_posts_path(@user))
   end
 end

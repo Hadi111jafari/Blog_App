@@ -10,4 +10,9 @@ RSpec.describe 'User listig path', type: :feature do
     visit user_path(@user)
     expect(page.find('img')['src']).to have_content('https://unsplash.com/photos/F_-0BxGuVvo')
   end
+
+  it 'shoult show the user\'s username.' do
+    visit user_path(@user)
+    expect(page).to have_content('Hadi')
+  end
 end

@@ -4,9 +4,13 @@
       <div class="photo">
         <%= image_tag(user.photo, id: "#{user.name}-img-#{user.id}", width: "150px") %>
       </div>
-      <div class="user_card">
-        <div class="user_name"><%= link_to user.name, user_path(user) %></div>
-        <div class="user_posts">Number of Posts: <%= user.posts_counter %></div>
+      <div class="user_dev_link">
+      <%= link_to(user) do %>
+        <div class="user_card">
+          <div class="user_name"><%= user.name %></div>
+          <div class="user_posts">Number of Posts: <%= user.posts_counter %></div>
+        </div>   
+      <% end %>
       </div>
     </li>
   <% end %>

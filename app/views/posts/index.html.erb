@@ -10,15 +10,13 @@
 
 <% @user.posts.each do |post| %>
   <div class="post">
-    <div class="post_title"><%= post.title %></div>
+    <div class="post_title"><%= link_to post.title,  user_post_path(@user, post) %>
+</div>
     <div class="post_text"><%= post.text %></div>
     <div class="post_media">
       <div class="post_comments">Comments: <%= post.comments_counter %></div>
       <div class="post_likes">Likes: <%= post.likes_counter %></div>
     </div>
-     <button class="user_btn">
-      <%= link_to "More", user_post_path(@user, post) %>
-    </button>
     <%= button_to "Like", user_post_likes_path(@user, post), params: { like: { author_id: @user.id, post_id: post.id}}%>
   </div>
   
@@ -31,3 +29,4 @@
   <% end %>
   </div>
 <% end %>
+<button>Pagination</button>

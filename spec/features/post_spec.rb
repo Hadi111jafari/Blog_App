@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Post listig path', type: :feature do
   before do
-    @user = User.create( name: 'Mahdi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+    @user = User.create(name: 'Mahdi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                         bio: 'This is my bio.', posts_counter: 0)
-    @user1 = User.create( name: 'Jafari', photo: 'https://unsplash.com/photos/F_-0BxGuV32',
+    @user1 = User.create(name: 'Jafari', photo: 'https://unsplash.com/photos/F_-0BxGuV32',
                          bio: 'This is my bio.', posts_counter: 0)
     @post = Post.create(author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet', comments_counter: 0,
                         likes_counter: 0)

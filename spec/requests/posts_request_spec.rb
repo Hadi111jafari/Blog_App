@@ -1,23 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  # before do
-  #   @user = User.create( name: 'Hadid',
-  #                       photo: 'https://images.pexels.com',
-  #                       bio: 'Lorem ipsum ', posts_counter: 0)
-  #   @post = Post.create( author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet', comments_counter: 0,
-  #                       likes_counter: 0)
-  # end
   describe 'GET /index' do
     before do
-      get user_posts_path(1)
+      @user = User.create(id: 1, name: 'Hadid',
+                          photo: 'https://images.pexels.com',
+                          bio: 'Lorem ipsum ', posts_counter: 0)
 
-      @user = User.create( name: 'Hadid',
-        photo: 'https://images.pexels.com',
-        bio: 'Lorem ipsum ', posts_counter: 0)
-        
-       @post = Post.create( author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet', comments_counter: 0,
-        likes_counter: 0)
+      @post = Post.create(id: 1, author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet',
+                          comments_counter: 0,
+                          likes_counter: 0)
+      get user_posts_path(1)
     end
     it 'response status is correct' do
       expect(response).to have_http_status(:ok)
@@ -34,6 +27,13 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET /show' do
     before do
+      @user = User.create(id: 1, name: 'Hadid',
+                          photo: 'https://images.pexels.com',
+                          bio: 'Lorem ipsum ', posts_counter: 0)
+
+      @post = Post.create(id: 1, author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet',
+                          comments_counter: 0,
+                          likes_counter: 0)
       get '/users/1/posts/1'
     end
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Post listig path', type: :feature do
   before do
-    @user = User.create(id: 1, name: 'Hadi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'This is my bio.',
+    @user = User.create(name: 'Abdul', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'This is my bio.',
                         posts_counter: 0)
     @post = Post.create(author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet', comments_counter: 0,
                         likes_counter: 0)
@@ -19,7 +19,7 @@ RSpec.describe 'Post listig path', type: :feature do
 
   it 'should show the user\'s username.' do
     visit user_posts_path(@user)
-    expect(page).to have_content('Hadi')
+    expect(page).to have_content('Abdul')
   end
 
   it 'should show the number of posts the user has written.' do

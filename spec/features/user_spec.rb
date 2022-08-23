@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'User listig path', type: :feature do
   before do
-    @user = User.create(id: 1, name: 'Hadi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'something.',
+    @user = User.create(id: 1, name: 'Hadi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'This is my bio.',
                         posts_counter: 0)
   end
 
@@ -19,5 +19,10 @@ RSpec.describe 'User listig path', type: :feature do
   it 'should show the user\'s number of posts.' do
     visit user_path(@user)
     expect(page).to have_content('Number of posts: 0')
+  end
+
+  it 'should show the user\'s bio.' do
+    visit user_path(@user)
+    expect(page).to have_content('This is my bio.')
   end
 end

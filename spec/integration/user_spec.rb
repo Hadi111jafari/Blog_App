@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User listig path', type: :feature do
+RSpec.describe 'User listig path', type: :system do
   before do
     @user = User.create(name: 'Hadi', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'This is my bio.',
                         posts_counter: 0)

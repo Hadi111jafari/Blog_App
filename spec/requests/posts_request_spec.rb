@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     before do
-      @user = User.create(id: 1, name: 'Hadid',
+      @user = User.create(name: 'Hadi',
                           photo: 'https://images.pexels.com',
                           bio: 'Lorem ipsum ', posts_counter: 0)
 
-      @post = Post.create(id: 1, author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet',
+      @post = Post.create(author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet',
                           comments_counter: 0,
                           likes_counter: 0)
       get user_posts_path(1)
@@ -27,11 +27,11 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET /show' do
     before do
-      @user = User.create(id: 1, name: 'Hadid',
+      @user = User.create(name: 'Hadi',
                           photo: 'https://images.pexels.com',
                           bio: 'Lorem ipsum ', posts_counter: 0)
 
-      @post = Post.create(id: 1, author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet',
+      @post = Post.create(author: @user, title: 'Post 1', text: 'Lorem ipsum dolor sit amet',
                           comments_counter: 0,
                           likes_counter: 0)
       get '/users/1/posts/1'

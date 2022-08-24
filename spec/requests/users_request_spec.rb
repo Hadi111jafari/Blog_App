@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
     before do
-      @user = User.create(id: 1, name: 'Hadi',
+      @user = User.create(name: 'Hadi',
                           photo: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           bio: 'Lorem ipsum dolor sit amet', posts_counter: 0)
       get users_path
@@ -23,7 +23,7 @@ RSpec.describe 'Users', type: :request do
   end
   describe 'GET /users/:id' do
     before do
-      @user = User.create(id: 1, name: 'Hadi',
+      @user = User.create(name: 'Hadi',
                           photo: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                           bio: 'Lorem ipsum dolor sit amet', posts_counter: 0)
       get user_path(1)

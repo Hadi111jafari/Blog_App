@@ -8,10 +8,12 @@
 .photo {
   width: 200px;
 }
-.user_dev_link a:link{
+
+.user_dev_link a:link {
   width: 60%;
   text-decoration: none;
 }
+
 .user_card {
   border: 1px solid #000;
   width: 100%;

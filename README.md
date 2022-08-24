@@ -40,12 +40,18 @@ To execute the tests, run the following command in your terminal:
 rspec
 ```
 
-## Author
+## Authors
 
 👤 **Abdul Hadi**
 
 - GitHub: [@Hadi111jafari](https://github.com/Hadi111jafari)
 - LinkedIn: [@Hadi111jafari](https://www.linkedin.com/in/abdul-hadi-jafari)
+
+👤 **Ronald Skinner**
+
+- GitHub: [@rskinnerc](https://github.com/rskinnerc)
+- Twitter: [@XSkinner](https://twitter.com/XSkinner)
+- LinkedIn: [Ronald Skinner Cardenas](https://www.linkedin.com/in/rskinnerc/)
 
 ## 🤝 Contributing
 

@@ -9,6 +9,11 @@
   width: 200px;
 }
 
+.user_dev_link a:link {
+  width: 60%;
+  text-decoration: none;
+}
+
 .user_card {
   border: 1px solid #000;
   width: 100%;
@@ -26,7 +31,7 @@
   font-size: 20px;
   align-self: end;
   margin: 30px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .bio {

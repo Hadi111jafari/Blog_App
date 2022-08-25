@@ -19,6 +19,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  right: 0;
 }
 
 .user_name {
@@ -82,6 +83,7 @@
 .post_button {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -136,4 +138,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.pagination {
+  margin-left: 45%;
+  margin-top: 1rem;
+  padding: 1rem;
 }

@@ -1,6 +1,6 @@
 <div class="card">
   <div class="photo">
-    <%= image_tag(@user.photo, width: "150px") %>
+           <img src="<%= @user.photo %>" id="<%= "#{@user.name}-img-#{@user.id}" %>" width="90px" height="90px" />
   </div>
   <div class="user_card">
     <div class="user_name"><%= @user.name %></div>
@@ -29,4 +29,4 @@
   <% end %>
   </div>
 <% end %>
-<button>Pagination</button>
+<button class="pagination">Pagination</button>

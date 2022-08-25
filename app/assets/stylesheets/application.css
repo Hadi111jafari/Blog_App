@@ -19,6 +19,39 @@
   margin: 0;
 }
 
+body {
+  --tw-bg-opacity: 1;
+
+  background-color: rgb(228 228 231/var(--tw-bg-opacity));
+  line-height: inherit;
+  margin: 0;
+}
+
+.main {
+  max-width: 35rem;
+  min-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.h2_title {
+  --tw-text-opacity: 1;
+
+  color: grey;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+#new_user {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+}
+
 .login {
   width: 40%;
   margin: 100px auto;
@@ -28,7 +61,21 @@
 }
 
 input {
-  margin: 15px;
+  margin: 15px 0;
   padding: 10px;
-  width: 50%;
+  width: 100%;
+}
+
+.field {
+  --tw-text-opacity: 1;
+
+  color: grey;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: left;
+}
+
+#user_remember_me {
+  max-width: 2rem;
 }

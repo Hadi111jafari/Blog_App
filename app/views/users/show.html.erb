@@ -1,6 +1,6 @@
 <section class="card">
   <div class="photo">
-    <%= image_tag(@user.photo, width: "150px") %>
+  <img src="<%= @user.photo %>" width="90px" height="90px"/>
   </div>
   <div class="user_card">
     <div class="user_name"><%= @user.name %></div>
@@ -13,11 +13,9 @@
   <p class="bio_data"><%= @user.bio  %></p>
 </div>
 
-<% @count=0 %>
 <section class="posts">
   <% @user.last_3_posts.each do |post| %>
     <div class="post">
-      <div class="post_count">Post #<%=@count+=1%></div>
       <div class="post_title"><%= link_to post.title, user_post_path(@user, post)  %></div>
       <div class="post_text"><%= post.text %></div>
       <div class="post_media">
@@ -33,6 +31,6 @@
 </section>
 
 <div class="post_button">
-  <%= link_to "See all posts", user_posts_path(@user) %>
+  <button><%= link_to "See all posts", user_posts_path(@user) %></button>
   <button><%= link_to "Add a post", new_user_post_path(@user) %></button>
 </div> 
